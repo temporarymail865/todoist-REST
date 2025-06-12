@@ -71,6 +71,10 @@ public class ProjectServiceImplementer implements ProjectService {
                         dueRequest.setDatetime(saveTask.getDue().getDatetime());
                         dueRequest.setString(saveTask.getDue().getString());
                         dueRequest.setTimezone(saveTask.getDue().getTimezone());
+                        dueRequest.setRecurring(saveTask.getDue().isRecurring());
+                        dueRequest.setRecurrenceIntervalDays(saveTask.getDue().getRecurrenceIntervalDays());
+                        dueRequest.setReminderEnabled(saveTask.getDue().isReminderEnabled());
+                        dueRequest.setReminderMinutesBefore(saveTask.getDue().getReminderMinutesBefore());
                     }
                     CreateTaskResponse createTaskResponse = CreateTaskResponse.builder()
                             .comment_count(saveTask.getCommentCount())
@@ -108,6 +112,10 @@ public class ProjectServiceImplementer implements ProjectService {
                     dueRequest.setDatetime(saveTask.getDue().getDatetime());
                     dueRequest.setString(saveTask.getDue().getString());
                     dueRequest.setTimezone(saveTask.getDue().getTimezone());
+                    dueRequest.setRecurring(saveTask.getDue().isRecurring());
+                    dueRequest.setRecurrenceIntervalDays(saveTask.getDue().getRecurrenceIntervalDays());
+                    dueRequest.setReminderEnabled(saveTask.getDue().isReminderEnabled());
+                    dueRequest.setReminderMinutesBefore(saveTask.getDue().getReminderMinutesBefore());
                 }
                 CreateTaskResponse createTaskResponse = CreateTaskResponse.builder()
                         .comment_count(saveTask.getCommentCount())

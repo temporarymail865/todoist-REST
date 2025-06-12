@@ -31,4 +31,12 @@ public class Due implements Serializable {
     private Date datetime;
 
     private String timezone;
+
+    private boolean recurring;
+
+    private int recurrenceIntervalDays;
+
+    private boolean reminderEnabled;
+
+    private int reminderMinutesBefore;
 }

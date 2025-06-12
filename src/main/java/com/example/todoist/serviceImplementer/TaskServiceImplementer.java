@@ -48,6 +48,10 @@ public class TaskServiceImplementer implements TaskService {
                     dueRequest.setDatetime(saveTask.getDue().getDatetime());
                     dueRequest.setString(saveTask.getDue().getString());
                     dueRequest.setTimezone(saveTask.getDue().getTimezone());
+                    dueRequest.setRecurring(saveTask.getDue().isRecurring());
+                    dueRequest.setRecurrenceIntervalDays(saveTask.getDue().getRecurrenceIntervalDays());
+                    dueRequest.setReminderEnabled(saveTask.getDue().isReminderEnabled());
+                    dueRequest.setReminderMinutesBefore(saveTask.getDue().getReminderMinutesBefore());
                 }
                 CreateTaskResponse createTaskResponse = CreateTaskResponse.builder()
                         .comment_count(saveTask.getCommentCount())
@@ -102,6 +106,10 @@ public class TaskServiceImplementer implements TaskService {
             due.setDate(taskRequest.getDue().getDate());
             due.setDatetime(taskRequest.getDue().getDatetime());
             due.setTimezone(taskRequest.getDue().getTimezone());
+            due.setRecurring(taskRequest.getDue().isRecurring());
+            due.setRecurrenceIntervalDays(taskRequest.getDue().getRecurrenceIntervalDays());
+            due.setReminderEnabled(taskRequest.getDue().isReminderEnabled());
+            due.setReminderMinutesBefore(taskRequest.getDue().getReminderMinutesBefore());
             dueRepository.save(due);
         }
         task.setDue(due);
@@ -127,6 +135,10 @@ public class TaskServiceImplementer implements TaskService {
             dueRequest.setDatetime(saveTask.getDue().getDatetime());
             dueRequest.setString(saveTask.getDue().getString());
             dueRequest.setTimezone(saveTask.getDue().getTimezone());
+            dueRequest.setRecurring(saveTask.getDue().isRecurring());
+            dueRequest.setRecurrenceIntervalDays(saveTask.getDue().getRecurrenceIntervalDays());
+            dueRequest.setReminderEnabled(saveTask.getDue().isReminderEnabled());
+            dueRequest.setReminderMinutesBefore(saveTask.getDue().getReminderMinutesBefore());
         }
         CreateTaskResponse createTaskResponse = CreateTaskResponse.builder()
                 .comment_count(saveTask.getCommentCount())
@@ -155,6 +167,10 @@ public class TaskServiceImplementer implements TaskService {
                 dueRequest.setDatetime(task.getDue().getDatetime());
                 dueRequest.setString(task.getDue().getString());
                 dueRequest.setTimezone(task.getDue().getTimezone());
+                dueRequest.setRecurring(task.getDue().isRecurring());
+                dueRequest.setRecurrenceIntervalDays(task.getDue().getRecurrenceIntervalDays());
+                dueRequest.setReminderEnabled(task.getDue().isReminderEnabled());
+                dueRequest.setReminderMinutesBefore(task.getDue().getReminderMinutesBefore());
             }
             CreateTaskResponse createTaskResponse = CreateTaskResponse.builder()
                     .comment_count(task.getCommentCount())
@@ -208,6 +224,10 @@ public class TaskServiceImplementer implements TaskService {
                 due.setDate(taskRequest.getDue().getDate());
                 due.setDatetime(taskRequest.getDue().getDatetime());
                 due.setTimezone(taskRequest.getDue().getTimezone());
+                due.setRecurring(taskRequest.getDue().isRecurring());
+                due.setRecurrenceIntervalDays(taskRequest.getDue().getRecurrenceIntervalDays());
+                due.setReminderEnabled(taskRequest.getDue().isReminderEnabled());
+                due.setReminderMinutesBefore(taskRequest.getDue().getReminderMinutesBefore());
                 dueRepository.save(due);
             }
             task.setDue(due);
